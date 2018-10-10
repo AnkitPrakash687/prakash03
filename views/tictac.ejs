@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>TicTacToe</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/tictac.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="JS/ankit.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Sofia|Lobster|Asul|Pacifico|Merienda' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Merienda|Pacifico|Oswald|Candal|Charmonman:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/game.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+      <a class="navbar-brand" href="#"><img border="0" alt="lOGO" src="images/LogoMakr_19k6Pb.png" width="60" height="60"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="myNav">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html">HOME</a>
+          <a class="nav-item nav-link" href="tictac.html">PLAY TIC-TAC</a>
+          <a class="nav-item nav-link" href="contact.html">CONTACT</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container" id="title">
+    <br><br>
+    <h1>Tic Tac Toe</h1>
+  </div>
+  <span id = "start-again">
+      <button class="btn btn-success btn-lg" onClick="startGame()">replay</button>
+    </span> 
+
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="grid-item" id="arena">
+
+        <table>
+          <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+          </tr>
+          <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+          </tr>
+          <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+          </tr>
+        </table>
+        <div class="endgame">
+          <div class="text"></div>
+        </div>
+      </div>
+    
+    <span id = "start">
+        <button class="btn btn-success btn-lg" onClick="startGame()">Start Game</button>
+      </span> 
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Algorithm used in this game is MiniMax</h5>
+            <p class="card-text">Minimax is a decision-making algorithm, typically used in a turn-based, two player
+              games.
+              The goal of the algorithm is to find the optimal next move. In the algorithm, one player is called the
+              maximizer,
+              and the other player is a minimizer. </p>
+            <p> If we assign an evaluation score to the game board, one player tries to choose
+              a game state with the maximum score, while the other chooses a state with the minimum score.
+              In other words, the maximizer works to get the highest score, while the minimizer tries get the lowest
+              score by
+              trying to counter moves.</p>
+            <p>It is based on the zero-sum game concept. In a zero-sum game, the total utility score is divided among
+              the players.
+              An increase in one player’s score results into the decrease in another player’s score. So, the total
+              score is always zero.
+              For one player to win, the other one has to lose. Examples of such games are chess, poker, checkers,
+              tic-tac-toe.</p>
+            <p><a href="https://www.baeldung.com/java-minimax-algorithm" class="card-link"><b>https://www.baeldung.com/java-minimax-algorithm</b></a> <i>for more info</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="JS/game.js" defer></script>
+
+</body>
+
+</html>
