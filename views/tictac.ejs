@@ -22,24 +22,8 @@
 </head>
 
 <body>
-
-  <div class="container">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-
-      <a class="navbar-brand" href="#"><img border="0" alt="lOGO" src="images/LogoMakr_19k6Pb.png" width="60" height="60"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="myNav">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="index.html">HOME</a>
-          <a class="nav-item nav-link" href="tictac.html">PLAY TIC-TAC</a>
-          <a class="nav-item nav-link" href="contact.html">CONTACT</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+ <% include header %>
+  
   <div class="container" id="title">
     <br><br>
     <h1>Tic Tac Toe</h1>
@@ -47,7 +31,6 @@
   <span id = "start-again">
       <button class="btn btn-success btn-lg" onClick="startGame()">replay</button>
     </span> 
-
 
   <div class="row">
     <div class="col-sm-4">
@@ -104,8 +87,8 @@
         </div>
       </div>
     </div>
-
-  <script src="JS/game.js" defer></script>
+    <% include footer %>
+  <script src="js/game.js" defer></script>
 
 </body>
 
