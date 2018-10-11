@@ -1,0 +1,19 @@
+{
+    "name": "prakash03",
+    "version": "0.0.1",
+    "description": "mywebpage app",
+    "main": "app.js",
+    "dependencies": {
+        "express": "latest",
+        "morgan": "latest",
+        "body-parser": "latest",
+        "ejs": "latest"
+    },
+    "author": "Ankit Prakash",
+    "homepage": "https://github.com/AnkitPrakash687/prakash03.git",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AnkitPrakash687/prakash03.git"
+    },
+    "license": "Apache-2.0"
+}
