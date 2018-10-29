@@ -3,6 +3,9 @@
     "version": "0.0.1",
     "description": "mywebpage app",
     "main": "app.js",
+    "scripts": {
+        "start" : "node app.js"
+    },
     "dependencies": {
         "body-parser": "latest",
         "ejs": "latest",
