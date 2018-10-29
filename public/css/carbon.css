@@ -1,0 +1,113 @@
+.carbon-jumbotron{
+	background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url('../images/background/carbon_bg.jpg');
+	background-position: center;
+}
+
+#title {
+    font-size: 4em;
+    font-family: "Oswald";
+}
+
+#heading{
+    color: rgba(28, 214, 28, 0.514);
+    text-decoration: none;
+}
+#heading:hover{
+    color: rgba(96, 221, 96, 0.514);
+}
+
+.calc-forms{
+    margin: 2rem;
+}
+
+#titleCalc {
+    font-size: 2em;
+    font-family: "Oswald";
+}
+#calc{
+    color: black;
+
+}
+
+#scroll-down{
+    height: 2rem;
+    width: 2rem;
+    scroll-behavior: smooth; 
+}
+
+#scroll-down:focus{
+    outline: 0;
+    
+}
+
+.carbon-calculator{
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+    padding: 3rem;
+
+    border-radius: .5rem;
+
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+
+#getStarted.tabcontent{
+    display: block;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 0;
+    border-top: none;
+}
+
+
+#familymember{
+    width: 50%;
+}
+
+#display{
+    display: none;
+}
+
+#result-title{
+    font-family: "Lobster";
+    font-size: 1.5rem;
+    color: rgb(71, 69, 69);
+}
+
+#display-text{
+    font-family: "Oswald";
+    font-size: 3rem;
+    color: rgba(238, 10, 10, 0.801);
+}

@@ -1,0 +1,19 @@
+.navbar{
+	font-family: 'Candal', sans-serif;
+	
+}
+
+#title{
+	
+	padding-top: 3em;
+	text-align: left;
+}
+
+#arena{
+	padding-bottom: 4em;
+	padding-top: 4em;
+}
+
+  .grid-item {
+	margin-left: 2em;
+  }
