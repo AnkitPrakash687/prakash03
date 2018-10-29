@@ -5,7 +5,6 @@ const bodyParser = require("body-parser"); // simplifies access to request body
 const fs = require('fs');  // NEW - this is required
 const app = express()  // make express app
 const http = require('http').Server(app);  // inject app into the server
-const port = 8080;
 // ADD THESE COMMENTS AND IMPLEMENTATION HERE 
 // 1 set up the view engine
 // 2 manage our entries
@@ -37,50 +36,55 @@ app.use(logger('combined', { stream: accessLogStream }));
 
 // 4 http GET default page at /
 app.get("/", function (req, res) {
-    //res.sendFile(path.join(__dirname + '/assets/index.html'))
-    res.render("index.ejs")
-   });
-   
-   // 4 http GET /tic-tac-toe
-   app.get("/tic-tac", function (req, res) {
-    res.render("tictac.ejs")
-   });
-   
-   // 4 http GET /about
-   
-   // 4 http GET /contact
-   app.get("/contact", function (req, res) {
-    res.render("contact.ejs")
-   });
+  //res.sendFile(path.join(__dirname + '/assets/index.html'))
+  res.render("index.ejs")
+});
+
+// 4 http GET /tic-tac-toe
+app.get("/tic-tac", function (req, res) {
+  res.render("tictac.ejs")
+});
+
+// 4 http GET /about
+app.get("/carbon-footprint", function (req, res) {
+  res.render("carbon-footprint.ejs")
+});
+// 4 http GET /contact
+app.get("/contact", function (req, res) {
+  res.render("contact.ejs")
+});
 // 5 http POST /contact
 app.post("/contact", function (req, res) {
-    const name = req.body.inputname;
-    const email = req.body.inputemail;
-    const company = req.body.inputcompany;
-    const comment = req.body.inputcomment;
-    const isError = true;
+  var api_key = 'baeaf4111464e8f25c83bae6d002e837-4836d8f5-f8958475';
+  var domain = 'sandbox7c71867b751e475dbb7895ae29db768f.mailgun.org';
+  var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
+  
+  var subject = req.body.userName;
+  var text = req.body.body;
 
-    // setup e-mail data with unicode symbols
-    const mailOptions = {
-      from: '"Denise Case" <denisecase@gmail.com>', // sender address
-      to: 'dcase@nwmissouri.edu, denisecase@gmail.com', // list of receivers
-      subject: 'Message from Website Contact page', // Subject line
-      text: comment,
-      err: isError
+  var data = {
+    from: 'Excited User <postmaster@sandbox7c71867b751e475dbb7895ae29db768f.mailgun.org>',
+    to: 'ankit.prakash687@gmail.com     ',
+    subject: subject,
+    text: text
+  };
+
+  mailgun.messages().send(data, function (error, body) {
+    console.log(body);
+    if (!error){
+      res.send("mail sent");
+    } else {
+      res.send("mail not sent");
     }
+  });
+      
+  });
 
-
-   
-    // logs to the terminal window (not the browser)
-    console.log('\nCONTACT FORM DATA: ' + name + ' ' + email + ' ' + comment + '\n');
-    //}A
-    // 6 this will execute for all unknown URIs not specifically handled
-});
 app.get(function (req, res) {
-    res.render("404.ejs")
-   });
-   
+  res.render("404.ejs")
+});
+
    // Listen for an application request on designated port
-   app.listen(port, function () {
-    console.log('Web app started and listening on http://localhost:' + port)
-   });
+//    app.listen(port, function () {
+//     console.log('Web app started and listening on http://localhost:' + port)
+//    });

@@ -4,10 +4,11 @@
     "description": "mywebpage app",
     "main": "app.js",
     "dependencies": {
-        "express": "latest",
-        "morgan": "latest",
         "body-parser": "latest",
-        "ejs": "latest"
+        "ejs": "latest",
+        "express": "latest",
+        "mailgun-js": "^0.22.0",
+        "morgan": "latest"
     },
     "author": "Ankit Prakash",
     "homepage": "https://github.com/AnkitPrakash687/prakash03.git",

@@ -23,70 +23,68 @@
     <% include header %>
 
     <div class="jumbotron-fluid">
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-7">
-                    <br>
-                    <br>
-                    <span id="profile">
-                        <img src="images/contactme.png" alt="avatar">
-                    </span>
-    
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-7">
+                <br>
+                <br>
+                <span id="profile">
+                    <img src="images/contactme.png" alt="avatar">
+                </span>
+
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="card" style="width: 30rem; height: auto; margin-top: 3rem">
+                    <div class="card-body">
+                        <h5 class="card-title">Address</h5>
+                        <h6>Street</h6>
+                        <p>Horizon, 1121 N College Drive</p>
+                        <h6>House No.</h6>
+                        <p>Apartment 34</p>
+                        <h6>City</h6>
+                        <p>Maryville</p>
+                        <h6>State</h6>
+                        <p>Missouri</p>
+                        <h5 class="card-title">Phone</h5>
+                        <p>+91 959-549-8905</p>
+
+
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4"></div>
-        </div>
-<div class="container">
-    
-<div class="row">
-    <div class="col-sm-6 col-md-6">
-            <div class="card" style="width: 30rem; height: auto; margin-top: 3rem">
-                    <div class="card-body">
-                      <h5 class="card-title">Address</h5>
-                      <h6>Street</h6>
-                      <p>Horizon, 1121 N College Drive</p>
-                      <h6>House No.</h6>
-                      <p>Apartment 34</p>
-                      <h6>City</h6>
-                      <p>Maryville</p>
-                      <h6>State</h6>
-                      <p>Missouri</p>
-                      <h5 class="card-title">Phone</h5>
-                      <p>+91 959-549-8905</p>  
-                      
-                      
-                    </div>
-                  </div>
-    </div>
 
-    <div class="col-sm-6 col-md-6">
-        <br><br>
-    <form>
-            <div class="row">
-                    <div class="col">
-                            <label for="exampleFormControlInput1">First Name</label>
-                      <input type="text" class="form-control" placeholder="First name">
+            <div class="col-sm-6 col-md-6">
+                <br><br>
+                <form role="form" action="/contact">
+                    <div class="row">
+                        <div class="col">
+                            <label for="userName"> Name</label>
+                            <input type="text" class="form-control is-valid" id="userName" name="userName" placeholder="Enter Name">
+                        </div>
                     </div>
-                    <div class="col">
-                            <label for="exampleFormControlInput1">Last Name</label>
-                      <input type="text" class="form-control" placeholder="Last name">
+                    <br>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control is-valid" id="email" placeholder="id@domaim.com">
                     </div>
-                  </div>
-            <br>
-           <div class="form-group">
-              <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    
+                    <br>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control is-valid" id="message" name="body" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
             </div>
-            
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Message</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </form>
-          </div>
-          </div>
         </div>
-<% include footer %>
-</body> 
+    </div>
+    <% include footer %>
+</body>
+
 </html>
